@@ -17,6 +17,7 @@ class HomeWork7
 
         Console.ReadLine();
 
+
         //davaleba 2
 
         Console.WriteLine("Enter your name: ");

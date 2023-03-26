@@ -37,7 +37,7 @@ class HomeWork7
         Console.WriteLine("enter number b: ");
         int b = Int32.Parse(Console.ReadLine());
 
-        int Div = a / b;
+        int Div = a % b;
         Console.WriteLine("Your answer is: " + Div);
         Console.ReadLine();
 
@@ -62,7 +62,8 @@ class HomeWork7
 
         if (numb)
         {
-            numb = (A > B || A > C || A > B);
+            numb = (A > B || A > C);
+            numb = (A > C && A > B);
         }
         Console.WriteLine("Your answer is: " + numb);
         Console.ReadLine();

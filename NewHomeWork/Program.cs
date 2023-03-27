@@ -103,13 +103,12 @@ class HomeWork7
         Console.WriteLine("Write Your Thecond Number t: ");
         int t = Int32.Parse(Console.ReadLine());
 
-        for (w=0 ; w % 2 == 0 && t % 2 == 0 ; t++ )
+        for (w = 0; w % 2 == 0 && t % 2 == 0; t++)
         {
-            if (w % 2 == 0 )
-         Console.WriteLine(" Your Numbers is: "+ w );
+            if (w % 2 == 0)
+                Console.WriteLine(" Your Numbers is: " + w);
             w++;
-
-        } 
+        }
         Console.ReadLine();
     }
 }

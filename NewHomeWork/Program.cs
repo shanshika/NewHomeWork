@@ -1,108 +1,115 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 class HomeWork7
 {
     static void Main(string[] args)
     {
-        // davaleba 1
+     // FirstTask
 
-        Console.WriteLine("Please enter number x:");
+        Console.WriteLine("please enter number x: ");
         int x = Int32.Parse(Console.ReadLine());
 
-        Console.WriteLine("Please enter number y: ");
+        if (x % 2 ==0)
+        {
+            Console.WriteLine("Your number is even");
+        }
+        else
+        {
+            Console.WriteLine("Your number is odd ");
+        }
+        Console.ReadLine();
+
+     //ThecondTask
+        Console.WriteLine("Write your number to know what the day is today: ");
+        int WeekDay = Convert.ToInt32(Console.ReadLine());
+     
+      switch (WeekDay)
+            {
+            case 1:
+                Console.WriteLine("Today is Monday");
+                break;
+            case 2:
+                Console.WriteLine("Today is Tuesday");
+                break;
+            case 3:
+                Console.WriteLine("Today is Wednesday");
+                break;
+            case 4:
+                Console.WriteLine("Today is Thursday");
+                break;
+            case 5:
+                Console.WriteLine("Today is Friday");
+                break;
+            case 6:
+                Console.WriteLine("Today is Saturday");
+                break;
+            case 7:
+                Console.WriteLine("Today is Sunday");
+                break;
+            default:
+                Console.WriteLine("We have no more week days");
+                break;
+      } Console.ReadLine();
+
+     // ThirdTask
+
+        int a = 5;
+
+        while (a >= 0)
+        {
+            Console.WriteLine("number = {0} ", a );
+            a--;
+        }
+        Console.ReadLine();
+        
+     //FourthTask
+        Console.WriteLine("Enter Your Number y:");
         int y = Int32.Parse(Console.ReadLine());
 
-        int Sum = x * y;
-        Console.WriteLine("Your answer is : " + Sum);
-
-        Console.ReadLine();
-
-
-        //davaleba 2
-
-        Console.WriteLine("Enter your name: ");
-        Console.ReadLine();
-
-        Console.WriteLine("Enter your surname: ");
-        Console.ReadLine();
-
-        Console.WriteLine("Enter your age: ");
-        int age = Int32.Parse(Console.ReadLine());
-
-        // davaleba 3
-
-        Console.WriteLine("enter number a: ");
-        int a = Int32.Parse(Console.ReadLine());
-
-        Console.WriteLine("enter number b: ");
-        int b = Int32.Parse(Console.ReadLine());
-
-        int Div = a % b;
-        Console.WriteLine("Your answer is: " + Div);
-        Console.ReadLine();
-
-        // davaleba 4
-        Console.WriteLine("Please enter your number z:");
-        int z = Int32.Parse(Console.ReadLine());
-
-        Console.WriteLine("Please enter your number q:");
-        int q = Int32.Parse(Console.ReadLine());
-
-        bool Answ = z == q;
-
-        Console.WriteLine("Your biggest number is: " + Answ);
-        Console.ReadLine();
-
-        // davaleba 5
-        int A = 5;
-        int B = 4;
-        int C = 7;
-
-        bool numb = true;
-
-        if (numb)
+        do
         {
-            numb = (A > B || A > C);
-            numb = (A > C && A > B);
+          Console.WriteLine("Number = {0}", y);
+            y--;
+        } while (y >= 0);
+          Console.ReadLine();
+
+     //FivesTask
+        Console.WriteLine("Enter Your Year of Birth: ");
+        int Date = Int32.Parse(Console.ReadLine());
+
+        do
+        {
+            Console.WriteLine("Year of Birth is = {0}", Date);
+            Date++;
+        } while (Date < 2016);
+        Console.ReadLine();
+
+     //SixthTask
+        int b = 0;
+
+        while (b <10)
+        {
+            Console.WriteLine("numebr = {0}", b);
+            b++;
         }
-        Console.WriteLine("Your answer is: " + numb);
         Console.ReadLine();
 
-        //davaleba 6
+        //SeventhTask
 
-        int[] numbers = new int[10] { 5, 10, 15, 20, 18, 5, 7, 0, 2, 5 };
+        Console.WriteLine("Write Your First Number w: ");
+        int w = Int32.Parse(Console.ReadLine());
 
-        Console.WriteLine(numbers[0] + "," + numbers[6]);
-        Console.ReadLine();
+        Console.WriteLine("Write Your Thecond Number t: ");
+        int t = Int32.Parse(Console.ReadLine());
 
-        // davaleba 7
-
-        int[,] Two = new int[3, 2]
-
-        { {111, 125 },{987,254 }, {165,931 } };
-
-        Console.WriteLine(Two[3, 2]);
-        Console.ReadLine();
-
-        int[,] Four = new int[4, 2]
-            {{112,115}, {1589,1572},{365,0}, {993,140}};
-
-        Console.WriteLine(Four[4, 2]);
-        Console.ReadLine();
-
-        int[,,] Three = new int[2, 2, 2]
+        for (w=0 ; w % 2 == 0 && t % 2 == 0 ; t++ )
         {
-           { {22 , 33}, {44 , 55}, },
-           { { 66 , 77} , { 88 , 99} }
-         };
-        Console.WriteLine(Three[2, 2, 2]);
-        Console.ReadLine();
+            if (w % 2 == 0 )
+         Console.WriteLine(" Your Numbers is: "+ w );
+            w++;
 
-        int[,,] Therd = new int[1, 2, 3]
-        {
-           { {123,545,3245 }, {198,358,658} }
-        };
-        Console.WriteLine(Therd[1, 2, 3]);
+        } 
         Console.ReadLine();
     }
 }

@@ -103,11 +103,30 @@ class HomeWork7
         Console.WriteLine("Write Your Thecond Number t: ");
         int t = Int32.Parse(Console.ReadLine());
 
-        for (w = 0; w % 2 == 0 && t % 2 == 0; t++)
+        int Fnum = 0;
+        int Snum = 0;
+
+        if (w == t)
         {
-            if (w % 2 == 0)
-                Console.WriteLine(" Your Numbers is: " + w);
-            w++;
+            Console.WriteLine("Your values are wrong");
+        }
+        if (w > t)
+        {
+            Fnum = w;
+            Snum = t;
+        }
+        if (t > w)
+        {
+            Fnum = w;
+            Snum = t;
+        }
+
+        for (int i = Fnum; i < Snum  ; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Console.WriteLine(" Your Numbers is: " + i);
+            }
         }
         Console.ReadLine();
     }

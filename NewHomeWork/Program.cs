@@ -1,103 +1,49 @@
-﻿using System;
+﻿using NewHomeWork;
+using System;
+using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Xml.Linq;
 
-class HomeWork7
+class HomeWork8
 {
+
     static void Main(string[] args)
     {
-        MyFirstMethod();
-        Console.ReadLine();
-        Examples();
-        Params();
-        WeightParms();
-
-        var result = NameSurnameAge("Nata", "Shanshiashvili", 34);
-        Console.WriteLine(result);
-        Console.ReadLine();
-    }    
-    //1
-    static void MyFirstMethod()
-    {
-        Console.Write("Enter your Name: ");
+        //1
+        Console.WriteLine("Enter your FirstName: ");
         string FirstName = Console.ReadLine();
 
-        Console.Write("Enter Current Date In Format (DD/MM/YYYY): ");
-        string CurrentDate = Console.ReadLine();
+        Console.WriteLine("Enter yoyr Age: ");
+        int Age = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Enter your Age: ");
-        int age = Convert.ToInt32(Console.ReadLine());
+        FirstNameAge YourFirstNameAge = new FirstNameAge(FirstName, Age);
+        YourFirstNameAge.GetNameAge();
+        Console.ReadLine();
+        
+        //2
 
-        Console.Write("Your Name: " + FirstName + " / " + "Current Date is: " + CurrentDate + " / " + "Your Age: " + age);
+        Console.WriteLine("Please, Enter your Number: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+
+        OddNumb Answers = new OddNumb();
+        Answers.GetOddNumb(number);
 
         Console.ReadLine();
-    }
-    //2
-    static void Examples()
-    {
-        Console.WriteLine("Please enter First Number: ");
-        int FirstNumber = Int32.Parse(Console.ReadLine());
 
-        Console.WriteLine("Please enter Second Number: ");
-        int SecondNumber = Int32.Parse (Console.ReadLine());
+        //3
+        Console.WriteLine("Please, Enter numbers  - From 0 to 6: ");
+        int Numbers = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Please Try Symbol + or * ");
-        string Symbol = Console.ReadLine();
+        WeekDay Result = new WeekDay();
+        Result.Days(Numbers);
 
-        if (Symbol == "+")
-        {
-            Console.WriteLine("Your result is: "+ (FirstNumber + SecondNumber));
-            Console.ReadLine();
-        }else if (Symbol == "*")
-        {
-            Console.WriteLine("Your result is: " + (FirstNumber * SecondNumber));
-            Console.ReadLine();
-        }
-        else
-        {
-            Console.WriteLine("Your Entered Symbol Is Wrong!");
-            Console.ReadLine();
-        }
-    }
-    //3
-    static void Params()
-    {
-        Console.WriteLine("Please Enter Wish Number:");
-        int WishNumber = Int32.Parse(Console.ReadLine());
-
-        if (WishNumber < 0)
-        {
-            Console.WriteLine("Your answer is {0}");
-            Console.ReadLine();
-        }
-        else 
-        {
-            Console.WriteLine("Your answer is: " + WishNumber);
-            Console.ReadLine();
-        }
-    }
-    //4
-    static void WeightParms()
-    {
-        Console.WriteLine("Enter One Item Weight in killogramms: ");
-        double kg = double.Parse(Console.ReadLine());
-
-        Console.WriteLine("Your Items are 50 Pices ");
-        int pc = 50;
-
-        Console.WriteLine("Your transportation params is: " + (kg * pc) + "killogramms");
         Console.ReadLine();
-    }
-    //5
-    
-      static string NameSurnameAge(string name, string surname)
-      {
-        return name + surname;
-      }
-      static string NameSurnameAge(string name, string surname, int age)
-      {
-         return name + surname + age;
-      }
-    
 
+        //4
+
+        Console.WriteLine(DateTime.Now);
+       
+        Console.ReadLine();
+
+    }
 }
